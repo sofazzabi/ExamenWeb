@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for entreprise in entreprises%}
+        <ul class="list-group">
+            <li class="list-group-item">{{entreprise.designation}}</li>
+            <li class="list-group-item">{{entreprise.pFEs | length}}</li>
+
+        </ul>
+    {%endfor%}
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
