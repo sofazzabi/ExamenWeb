@@ -1,11 +1,8 @@
 <?php
 
 namespace App\Controller;
-
 use App\Entity\Entreprise;
-use App\Entity\Personne;
 use App\Entity\PFE;
-use App\Form\PersonneType;
 use App\Form\PFEType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,7 +26,10 @@ class PfeController extends AbstractController
             $managaer = $doctrine->getManager();
             $managaer->persist($pfe);
             $managaer->flush();
-            return $this->redirectToRoute('app_pfe');
+            return $this->render('pfe/index2.html.twig', [
+                'pfe'=>$pfe
+
+            ]);
 
 
 

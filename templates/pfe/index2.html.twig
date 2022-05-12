@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% for entreprise in entreprises%}
-        <ul class="list-group">
-            <li class="list-group-item">{{entreprise.designation}}</li>
-            <li class="list-group-item">{{entreprise.pFEs | length}}</li>
 
+        <ul class="list-group">
+            <li class="list-group-item">Le titre est :  {{pfe.title}}</li>
+            <li class="list-group-item">L'étudiant est : {{pfe.student}}</li>
+            <li class="list-group-item">L'entreprise  est : {{pfe.entreprise}}</li>
         </ul>
-    {%endfor%}
+
 
 {% endblock %}
 

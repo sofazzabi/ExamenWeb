@@ -1,13 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% for entreprise in entreprises%}
-    <ul class="list-group">
-        <li class="list-group-item">{{entreprise.designation}}</li>
-        <li class="list-group-item">{{entreprise.pFEs | length}}</li>
+    <div class="alert alert-info">Nombre de pfe par entreprise</div>
+    <div class="row">
 
-    </ul>
+    {% for entreprise in entreprises%}
+
+
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Carte</div>
+
+            <div class="card-body">
+                <h5 class="card-title">{{entreprise.designation}}</h5>
+                <p class="card-text">{{entreprise.pFEs | length}}</p>
+
+            </div>
+        </div>
+
     {%endfor%}
+    </div>
 {% endblock %}
 
 {% block title %}
